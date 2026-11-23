@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "007: Tomorrow Never Dies",
+    "id": "SLUS-00975",
+    "boot_exe": "SLUS_009.75"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "USA",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "007 - Tomorrow Never Dies (USA).cue",
+    "bin_name": "007 - Tomorrow Never Dies (USA).bin",
+    "track_counts": [
+      1
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 573594000,
+      "md5": "cd844bb94308eff3dda5e3ecb4a3c907",
+      "sha1": "5c635e990dc77c481eb177dc86deb7a198f17cf8",
+      "crc32": "02f976df"
+    },
+    "disc_fp": "8c4cd869d182a48b1188ee1e19651932b0d7f1dd42f7789c6f17862a0031672a"
+  },
+  "exe": {
+    "load_address": "0x80010000",
+    "entry_pc": "0x80014CE8",
+    "text_size": "0x0000E000",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 182,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [
+    "cue has only 1 TRACK — Track-01-only dumps fail multi-track netplay/catalog gates; prefer a full Redump cue."
+  ],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "007: Tomorrow Never Dies",
+  "system": "PS1",
+  "type": "recomp",
+  "toolchain": "psxrecomp",
+  "status": "exploring",
+  "project": "007-tomorrow-never-dies-recomp",
+  "original": {
+    "region": "USA",
+    "serial": "SLUS-00975"
+  }
+}

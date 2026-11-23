@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "007: Tomorrow Never Dies"
+id = "SLUS-00975"
+players = 1
+exe = "disc/SLUS_009.75"
+disc = "disc/007 - Tomorrow Never Dies (USA).cue"
+discs = ["disc/007 - Tomorrow Never Dies (USA).cue"]
+disc_serials = ["SLUS-00975"]
+load_address = "0x80010000"
+entry_pc = "0x80014CE8"
+text_size = "0x0000E000"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "007 - Tomorrow Never Dies (USA).bin"
+cue_name = "007 - Tomorrow Never Dies (USA).cue"
+boot_exe = "SLUS_009.75"
+known_sizes = [573594000]
+known_md5 = [
+  "cd844bb94308eff3dda5e3ecb4a3c907",
+]
+known_sha1 = [
+  "5c635e990dc77c481eb177dc86deb7a198f17cf8",
+]
+known_crc32 = [
+  "02f976df",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH1001.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "007: Tomorrow Never Dies Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "8c4cd869d182a48b1188ee1e19651932b0d7f1dd42f7789c6f17862a0031672a"

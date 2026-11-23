@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "007-tomorrow-never-dies-psx",
+  "name": "007: Tomorrow Never Dies",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "007-tomorrow-never-dies-recomp",
+  "rom_identity": {
+    "crc32": [
+      "02f976df"
+    ],
+    "md5": [
+      "cd844bb94308eff3dda5e3ecb4a3c907"
+    ],
+    "sha1": [
+      "5c635e990dc77c481eb177dc86deb7a198f17cf8"
+    ],
+    "disc_serials": [
+      "SLUS-00975"
+    ],
+    "sizes": [
+      573594000
+    ],
+    "filenames": [
+      "007 - Tomorrow Never Dies (USA).cue",
+      "007 - Tomorrow Never Dies (USA).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "disc_fps": [
+      "8c4cd869d182a48b1188ee1e19651932b0d7f1dd42f7789c6f17862a0031672a"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH1001.BIN",
+    "profile": "SCPH1001",
+    "crc32": [
+      "37157331"
+    ],
+    "md5": [
+      "924e392ed05558ffdb115408c263dccf"
+    ],
+    "sha1": [
+      "10155d8d6e6e832d6ea66db9bc098321fb5e8ebf"
+    ],
+    "sha256": [
+      "71af94d1e47a68c11e8fdb9f8368040601514a42a5a399cda48c7d3bff1e99d3"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH1001.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/007-tomorrow-never-dies-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "007-tomorrow-never-dies-*-windows-x64.zip",
+      "linux-x64": "007-tomorrow-never-dies-*-linux-x64.zip",
+      "macos-arm64": "007-tomorrow-never-dies-*-macos-arm64.zip",
+      "macos-x64": "007-tomorrow-never-dies-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "007_tomorrow_never_dies.exe",
+    "linux": "007_tomorrow_never_dies",
+    "macos": "007_tomorrow_never_dies"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/007-tomorrow-never-dies-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}
